@@ -14,7 +14,6 @@ function Register(props) {
 	}
 	function onClick() {
 		// send form to server
-      c`onsole.log(fields);`
       window.location.replace('/login')
 	}
 	return (
