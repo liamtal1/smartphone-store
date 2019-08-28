@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import axios from 'axios';
 
 function Register(props) {
 	const [fields, setFields] = useState({});
@@ -12,9 +13,16 @@ function Register(props) {
 			[name]: value, // + change
 		});
 	}
-	function onClick() {
-		// send form to server
-      window.location.replace('/login')
+	async function onClick() {
+		try {
+			const response = await axios.post('http://localhost:3001/register', {...fields});
+			console.log('response', response);
+			window.location.replace('/login');
+		} catch (err) {
+			// send form to server
+			// handle errors
+			console.log('err', err);
+		}
 	}
 	return (
 		<div>
