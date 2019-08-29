@@ -5,18 +5,95 @@
 		"Compatibility": "Partner",
 		"Size": "5.8",
 		"Operating System": "iOS",
-		"quantity": 140,
-		"price": 100,
-		"imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,h_1193,w_2121,x_0,y_64/v1565279671/shape/mentalfloss/578211-gettyimages-542930526.jpg?itok=OC39JJLs"
+		"quantity": 150,
+		"price": 1099,
+		"imageUrl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjQhIqCzabkAhUtzYUKHcMRBbMQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.gomobile.co.il%2Fitems%2F1979190-Apple-iPhone-XS-64GB&psig=AOvVaw3EiG4T8VQ297DuFWZnQdap&ust=1567117295472189"
 	},
 	{
-		"Brand": "Apple",
-		"Model": "iPhone XS",
-		"Compatibility": "Partner",
-		"Size": "5.8",
-		"Operating System": "iOS",
+		"Brand":  "Samsung",
+		"Model":  "Galaxy S10 Plus",
+		"Compatibility":  "Partner / 012",
+		"Size": "6.4",
+		"Operating System": "Android",
+		"quantity": 195,
+		"price": 1199,
+		"imageUrl": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fd3m9l0v76dty0.cloudfront.net%2Fsystem%2Fphotos%2F3598155%2Flarge%2F1fbcb1158db90ef650ba1ccbbcac1b3c.jpg&imgrefurl=http%3A%2F%2Fi-cell.co.il%2Fitems%2F2235867--%25D7%2598%25D7%259C%25D7%25A4%25D7%2595%25D7%259F-%25D7%25A1%25D7%259C%25D7%2595%25D7%259C%25D7%25A8%25D7%2599-Samsung-Galaxy-S10-Plus-SM-G975F-128GB-%25D7%25A1%25D7%259E%25D7%25A1%25D7%2595%25D7%25A0%25D7%2592&docid=MupRfZJQl-1nKM&tbnid=wIHEarhAAsO_aM%3A&vet=10ahUKEwjO_ejK1abkAhUMzIUKHUBBD3cQMwhCKAUwBQ..i&w=500&h=459&bih=803&biw=1707&q=s10%20plus&ved=0ahUKEwjO_ejK1abkAhUMzIUKHUBBD3cQMwhCKAUwBQ&iact=mrc&uact=8"
+	},
+	{
+		"Brand": "Huawei",
+		"Model": "Huawei P30 Pro",
+		"Compatibility": "Cellcom",
+		"Size":	"6.4",
+		"Operating System":	"Android",
 		"quantity": 140,
-		"price": 100,
-		"imageUrl": "https://images2.minutemediacdn.com/image/upload/c_crop,h_1193,w_2121,x_0,y_64/v1565279671/shape/mentalfloss/578211-gettyimages-542930526.jpg?itok=OC39JJLs"
+		"price": 999,
+		"imageUrl": "https://www.google.com/imgres?imgurl=https%3A%2F%2Fazcd.harveynorman.com.au%2Fmedia%2Fcatalog%2Fproduct%2Fp%2F3%2Fp30_bcrystal_pro_1.jpg&imgrefurl=https%3A%2F%2Fwww.harveynorman.com.au%2Fhuawei-p30-pro-256gb-breathing-crystal.html&docid=dyWQTkIZTk7qPM&tbnid=d0WRLwolz00iAM%3A&vet=10ahUKEwiAt_2E2abkAhWBnVwKHfCtBjYQMwg7KAIwAg..i&w=1600&h=900&bih=791&biw=852&q=p30%20pro&ved=0ahUKEwiAt_2E2abkAhWBnVwKHfCtBjYQMwg7KAIwAg&iact=mrc&uact=8"
+
+	},
+	{
+		"Brand": "Xiaomi",
+		"Model":  "Xiaomi Mi 9",
+		"Compatibility": "Pelephone",
+		"Size": "6.3",
+		"Operating System": "Android",
+		"quantity": 120,
+		"price": 1049,
+		"imageUrl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiVuNaZ2abkAhULyxoKHbJzALQQjRx6BAgBEAQ&url=https%3A%2F%2Fcsmobiles.com%2Fgb%2FMobile%2F8007-xiaomi-mi-9-4g-64gb-dual-sim-blue-6941059619413.html&psig=AOvVaw0zIm-R36bZVqyMr4E7ZND3&ust=1567120567565341"
+
+	},
+	{
+		"Brand": "LG",
+		"Model": "LG G8s",
+		"Compatibility": "Rami-Levi",
+		"Size": "6.21",
+		"Operating System": "Android",
+		"quantity": 140,
+		"price": 950,
+		"imageUrl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiuoZSp2abkAhXGy4UKHbCoAEIQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.ivory.co.il%2Fcatalog.php%3Fid%3D30327&psig=AOvVaw3bS1ARrA6uqdIoFV3_ujyL&ust=1567120602677955"
+
+	},
+	{
+		"Brand": "Nokia",
+		"Model": "Nokia 105",
+		"Compatibility": "Hot Mobile",
+		"Size": "1.8",
+		"Operating System":	"Other",
+		"quantity": 140,
+		"price": 199,
+		"imageUrl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwi3iPu02abkAhXBxYUKHXd_BMwQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.ivory.co.il%2Fcatalog.php%3Fid%3D12598&psig=AOvVaw3j7L0tX-PBnifT5fLuBkfR&ust=1567120626711141"
+
+	},
+	{
+		"Brand": "Xiaomi",
+		"Model": "Xiaomi Redmi Note 7",
+		"Compatibility": "012",
+		"Size":	"6.3",
+		"Operating System":	"Android",
+		"quantity": 170,
+		"price": 899,
+		"imageUrl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwifi9bC2abkAhVSz4UKHSH9DgYQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.gomobile.co.il%2Fitems%2F2264184-Xiaomi-Redmi-Note-7-64GB-4GB-RAM-&psig=AOvVaw0f8akSfnO3CUgAgLGrjn3R&ust=1567120656041731"
+
+	},
+	{
+		"Brand":  "Slider",
+		"Model": "W50B",
+		"Compatibility": "Cellcom" ,
+		"Size": "2.4",
+		"Operating System":	"Other",
+		"quantity": 160,
+		"price": 149,
+		"imageUrl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjz8evR2abkAhXK34UKHbA-DUwQjRx6BAgBEAQ&url=https%3A%2F%2Fksp.co.il%2F%3Fuin%3D54858&psig=AOvVaw0oaclsvsjSKhV_7k870OHc&ust=1567120687351656"
+
+	},
+	{
+		"Brand":  "Apple",
+		"Model": "iPhone XR",
+		"Compatibility": "Partner / 012",
+		"Size": "6.1",
+		"Operating System": "iOS",
+		"quantity": 180,
+		"price": 1049,
+		"imageUrl": "https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwjVzsrk2abkAhUBSxoKHWU4DzgQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.apple.com%2Fshop%2Fbuy-iphone%2Fiphone-xr%2F6.1-inch-display-64gb-red-unlocked&psig=AOvVaw0J0VcljFWbtmgErwz-TY0h&ust=1567120727365349"
+
 	}
 ]
