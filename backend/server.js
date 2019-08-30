@@ -10,14 +10,22 @@ app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-	res.cookie('user', 'work');
-	res.send('ok');
+// refresh cookie
+app.use((req, res, next) => {
+	const user = req.cookies.user;
+	if (user) {
+		// set cookie
+		res.cookie('user', user, {
+			maxAge: 1000 * 60 * 5,
+		});
+   }
+   next();
 });
 
 // get products
 app.get('/products', (req, res) => {
 	try {
+		console.log('wor');
 		const file = fs.readFileSync('products.json', 'utf8');
 		const products = JSON.parse(file);
 		res.json(products);
@@ -67,6 +75,7 @@ app.post('/register', (req, res) => {
 
 app.post('/login', (req, res) => {
 	try {
+      console.log('/login api')
 		const {email, password} = req.body;
 
 		// read data from file;
@@ -82,7 +91,9 @@ app.post('/login', (req, res) => {
 		}
 
 		// set cookie
-		res.cookie('user', 'asdasdsa');
+		res.cookie('user', JSON.stringify(existsUser), {
+			maxAge: 1000 * 60 * 5,
+		});
 
 		console.log('existsUser', existsUser);
 		res.json({

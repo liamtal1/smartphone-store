@@ -5,14 +5,12 @@ import axios from 'axios';
 
 function Home(props) {
 	const user = Cookies.get('user');
-	console.log('user', user);
 	const [products, setProducts] = useState([]);
 
 	useEffect(() => {
 		async function getProduct() {
 			try {
-				const response = await axios('http://localhost:3001/products');
-				console.log('data', response);
+				const response = await axios('http://localhost:3000/products');
 				setProducts(response.data);
 			} catch (err) {
 				console.log('getProduct error', err.message);
@@ -24,28 +22,32 @@ function Home(props) {
 	}, []);
 
 	if (!user) {
-		// return <Redirect to='/login' />
+		return <Redirect to='/login' />
 	}
 	if (products.length < 1) {
 		return 'loading....';
 	}
 
 	const productsView = products.map((product, index) => {
-		console.log(product);
 		return (
-			<div className='product' key={index}>
-				<div>{product.Brand}</div>
-				<div>{product.Compatibility}</div>
-				<div>
-					<img src={product.imageUrl} alt='pic' width='300' height='300' />
-				</div>
-				<div>
-					<button>add to cart </button>
+			<div className='column' key={index}>
+				<div className='content'>
+					<img src={product.imageUrl} alt='Mountains' />
+					<h3>
+						{product.Model} {product.price}$
+					</h3>
+					<div>
+						<button onClick={() => props.addToCart(product)}>Add to cart</button>
+					</div>
 				</div>
 			</div>
 		);
 	});
-	return <div>{productsView}</div>;
+	return (
+		<div className='main'>
+			<div className='row'>{productsView}</div>
+		</div>
+	);
 }
 
 export default Home;

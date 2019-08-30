@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import {Redirect} from 'react-router-dom';
+import {Redirect,NavLink} from 'react-router-dom';
 
 function Login(props) {
 	const [fields, setFields] = useState({});
@@ -9,16 +9,15 @@ function Login(props) {
 		// when input change value
 		let name = event.target.name;
 		let value = event.target.value;
-		console.log(name, value);
 		setFields({
 			...fields, //copy to object
 			[name]: value, // + change
 		});
 	}
 	async function onClick() {
+      console.log('word')
 		try {
-			const response = await axios.post('http://localhost:3001/login', {...fields});
-			console.log('response', response);
+			const response = await axios.post('http://localhost:3000/login', {...fields});
 			setIsLoggedIn(true);
 		} catch (err) {
 			// send form to server
@@ -73,7 +72,7 @@ function Login(props) {
 						Cancel
 					</button>
 					<span className='psw'>
-						Forgot <a href='#'>password?</a>
+						 <NavLink to='/register'>register</NavLink>
 					</span>
 				</div>
 			</div>
