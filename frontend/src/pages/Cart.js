@@ -1,10 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
+import Cookies from 'js-cookie';
+import {Redirect} from 'react-router-dom';
 
 import Checkout from '../components/Checkout';
 
 function Cart(props) {
-	console.log('props', props);
+	const user = Cookies.get('user');
 	const {cart} = props;
 	const [checkoutOpen, setCheckoutOpen] = useState(true);
 
@@ -37,6 +39,11 @@ function Cart(props) {
 			</tr>
 		);
 	});
+
+	if (!user) {
+		return <Redirect to='/login' />;
+	}
+
 	return (
 		<div className='cart'>
 			<table>
