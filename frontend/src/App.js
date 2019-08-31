@@ -7,7 +7,7 @@ import './stylesheets/navbar.css';
 import './stylesheets/products.css';
 import './stylesheets/cart.css';
 
-import {BrowserRouter, Route, NavLink} from 'react-router-dom';
+import {BrowserRouter, Route, NavLink, withRouter} from 'react-router-dom';
 
 import Cookie from 'js-cookie';
 
@@ -15,6 +15,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Cart from './pages/Cart';
+
+import NavBar from './components/Navbar';
 
 function App() {
 	const user = Cookie.get('user');
@@ -40,11 +42,12 @@ function App() {
 	};
 
 	const logOut = event => {
-      event.preventDefault();
-      console.log(1)
+		event.preventDefault();
+		Cookie.remove('user');
+		window.location.replace('/login');
 	};
 	return (
-		<BrowserRouter>
+		<div>
 			{user && (
 				<div className='topnav'>
 					<NavLink to='/' exact>
@@ -54,6 +57,14 @@ function App() {
 					<a href='#' className='href' onClick={logOut}>
 						log out
 					</a>
+
+					{/*search field */}
+					<div className="search-container">
+						<form action="/action_page.php">
+							<input type="text" placeholder="Search.." name="search" />
+							<button type="submit"><i className="fa fa-search"></i></button>
+						</form>
+					</div>
 				</div>
 			)}
 
@@ -65,10 +76,10 @@ function App() {
 				render={() => <Cart cart={cart} addItem={addItem} amount={amount} />}
 			/>
 			<Route path='/' exact render={() => <Home addToCart={addToCart} />} />
-		</BrowserRouter>
+			</div>
 	);
 }
 
 // Home(name) === <Home name={name} />
 
-export default App;
+export default withRouter(App);
