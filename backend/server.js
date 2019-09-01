@@ -2,10 +2,13 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+var Ddos = require('ddos');
+var ddos = new Ddos({burst: 10, limit: 15});
 const cors = require('cors');
 const app = express();
 const port = 3001;
 
+app.use(ddos.express);
 app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json());
@@ -18,8 +21,8 @@ app.use((req, res, next) => {
 		res.cookie('user', user, {
 			maxAge: 1000 * 60 * 5,
 		});
-   }
-   next();
+	}
+	next();
 });
 
 // get products
@@ -75,7 +78,7 @@ app.post('/register', (req, res) => {
 
 app.post('/login', (req, res) => {
 	try {
-      console.log('/login api')
+		console.log('/login api');
 		const {email, password} = req.body;
 
 		// read data from file;

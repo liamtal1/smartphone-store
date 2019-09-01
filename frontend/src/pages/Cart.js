@@ -8,7 +8,7 @@ import Checkout from '../components/Checkout';
 function Cart(props) {
 	const user = Cookies.get('user');
 	const {cart} = props;
-	const [checkoutOpen, setCheckoutOpen] = useState(true);
+	const [checkoutOpen, setCheckoutOpen] = useState(false);
 
 	let globalTotal = 0;
 
