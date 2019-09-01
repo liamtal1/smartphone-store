@@ -33,7 +33,9 @@ function Login(props) {
 			<div className='modal-content animate' action='/action_page.php'>
 				<div className='imgcontainer'>
 					<span>&times;</span>
-					<img src='img_avatar2.png' alt='Avatar' className='avatar' />
+					<img src='https://media.wired.com/photos/5b22c5c4b878a15e9ce80d92/master/pass/iphonex-TA.jpg'
+					alt='Avatar'
+					className='avatar' height={250} />
 				</div>
 
 				<div className='container'>

@@ -60,7 +60,7 @@ function Cart(props) {
 			</table>
 			<div className='summary'>
 				<span>To pay: {globalTotal}$</span>
-				<button onClick={() => setCheckoutOpen(true)}>Checkout</button>
+				<button onClick={() =>{ {if(globalTotal>0) setCheckoutOpen(true)}}}>Checkout</button>
 				<Checkout open={checkoutOpen} close={close} />
 			</div>
 		</div>
