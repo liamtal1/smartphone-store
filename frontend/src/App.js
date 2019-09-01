@@ -57,6 +57,14 @@ function App() {
 					<a href='#' className='href' onClick={logOut}>
 						log out
 					</a>
+
+					{/*search field */}
+					<div className="search-container">
+						<form action="/action_page.php">
+							<input type="text" placeholder="Search.." name="search" />
+							<button type="submit"><i className="fa fa-search"></i></button>
+						</form>
+					</div>
 				</div>
 			)}
 
@@ -68,7 +76,7 @@ function App() {
 				render={() => <Cart cart={cart} addItem={addItem} amount={amount} />}
 			/>
 			<Route path='/' exact render={() => <Home addToCart={addToCart} />} />
-		</div>
+			</div>
 	);
 }
 
