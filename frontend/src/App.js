@@ -6,6 +6,8 @@ import './stylesheets/login.css';
 import './stylesheets/navbar.css';
 import './stylesheets/products.css';
 import './stylesheets/cart.css';
+import './stylesheets/about us.css';
+import './stylesheets/Product_of_the_week.css';
 
 import axios from 'axios';
 
@@ -17,6 +19,8 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Cart from './pages/Cart';
+import About_us from './pages/About_us';
+import Product_of_the_week from './pages/Product_of_the_week';
 
 function App() {
 	const user = Cookie.get('user');
@@ -82,6 +86,8 @@ function App() {
 						Home
 					</NavLink>
 					<NavLink to='/cart'>Cart</NavLink>
+					<NavLink to='/About_us'> About us </NavLink>
+					<NavLink to='/Product_of_the_week'> Product of the week</NavLink>
 					<a href='#' className='href' onClick={logOut}>
 						log out
 					</a>
@@ -108,10 +114,21 @@ function App() {
 				exact
 				render={() => <Cart cart={cart} addItem={addItem} amount={amount} />}
 			/>
+
 			<Route
 				path='/'
 				exact
 				render={() => <Home addToCart={addToCart} products={filteredProducts} />}
+			/>
+			<Route
+				path='/About_us'
+				exact
+				render={() => <About_us exact component = {About_us} />}
+			/>
+			<Route
+				path='/Product_of_the_week'
+				exact
+				render={() => <Product_of_the_week exact component = {Product_of_the_week} />}
 			/>
 		</div>
 	);

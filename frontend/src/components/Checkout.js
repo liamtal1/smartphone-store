@@ -22,7 +22,6 @@ function Login(props) {
 		<div id='id01' className=''>
 			<div className='modal-content animate'>
 				<div className='imgcontainer'>
-					<span>&times;</span>
 					<img
 						src='https://media.wired.com/photos/5b22c5c4b878a15e9ce80d92/master/pass/iphonex-TA.jpg'
 						alt='Avatar'
@@ -65,10 +64,8 @@ function Login(props) {
 						required
 					/>
 
-					<button type='submit'>Buy</button>
-					<button type='submit' onClick={props.close}>
-						Cancel
-					</button>
+					<button type='submit' onClick={props.close} > Buy </button>
+					<button type='submit' onClick={props.close}> Cancel </button>
 				</div>
 			</div>
 		</div>

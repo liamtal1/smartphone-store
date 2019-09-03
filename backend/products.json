@@ -53,14 +53,14 @@
 
 	},
 	{
-		"Brand": "Nokia",
-		"Model": "Nokia 105",
+		"Brand": "Huawei",
+		"Model": "Huawei Mate 20 Lite",
 		"Compatibility": "Hot Mobile",
-		"Size": "1.8",
-		"Operating System":	"Other",
+		"Size": "6.3",
+		"Operating System":	"Android",
 		"quantity": 140,
-		"price": 199,
-		"imageUrl": "https://img.zap.co.il/pics/2/3/6/8/48318632c.gif"
+		"price": 989,
+		"imageUrl": "https://img.ksp.co.il/item/53238/m_5.jpg?noCash"
 
 	},
 	{
@@ -75,14 +75,14 @@
 
 	},
 	{
-		"Brand":  "Slider",
-		"Model": "W50B",
+		"Brand":  "Samsung",
+		"Model": "Samsung Galaxy A7 ",
 		"Compatibility": "Cellcom" ,
-		"Size": "2.4",
-		"Operating System":	"Other",
+		"Size": "6.0",
+		"Operating System":	"Android",
 		"quantity": 160,
-		"price": 149,
-		"imageUrl": "https://img.ksp.co.il/item/54858/m_1.jpg?noCash"
+		"price": 749,
+		"imageUrl": "https://img.ksp.co.il/item/54659/m_1.jpg?noCash"
 
 	},
 	{
