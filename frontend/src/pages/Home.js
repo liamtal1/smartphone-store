@@ -1,28 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import Cookies from 'js-cookie';
 import {Redirect} from 'react-router-dom';
-import axios from 'axios';
 
 function Home(props) {
+	const {products} = props;
 	const user = Cookies.get('user');
-	const [products, setProducts] = useState([]);
-
-	useEffect(() => {
-		async function getProduct() {
-			try {
-				const response = await axios('http://localhost:3000/products');
-				setProducts(response.data);
-			} catch (err) {
-				console.log('getProduct error', err.message);
-			}
-		}
-
-		getProduct();
-		// load products after first render
-	}, []);
 
 	if (!user) {
-		return <Redirect to='/login' />
+		return <Redirect to='/login' />;
 	}
 	if (products.length < 1) {
 		return 'loading....';

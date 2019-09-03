@@ -7,7 +7,9 @@ import './stylesheets/navbar.css';
 import './stylesheets/products.css';
 import './stylesheets/cart.css';
 
-import {BrowserRouter, Route, NavLink, withRouter} from 'react-router-dom';
+import axios from 'axios';
+
+import {Route, NavLink, withRouter} from 'react-router-dom';
 
 import Cookie from 'js-cookie';
 
@@ -16,17 +18,43 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Cart from './pages/Cart';
 
-import NavBar from './components/Navbar';
-
 function App() {
 	const user = Cookie.get('user');
 	const [cart, setCart] = useState([]);
 	const [amount, setAmount] = useState({});
+	const [filter, setFilter] = useState('');
+	const [products, setProducts] = useState([]);
+	const [filteredProducts, setFilteredProducts] = useState([]);
+
+	useEffect(() => {
+		async function getProduct() {
+			try {
+				const response = await axios('http://localhost:3000/products');
+				setProducts(response.data);
+				applyFilter(response.data);
+			} catch (err) {
+				console.log('getProduct error', err.message);
+			}
+		}
+
+		getProduct();
+		// load products after first render
+	}, []);
 
 	const addItem = (product, value) => {
 		amount[product.Model] = value;
 		setAmount({...amount});
 	};
+
+	function applyFilter(items) {
+		const result = items.filter(product => {
+			return (
+				product.Model.toLowerCase().includes(filter.toLowerCase()) ||
+				product.Brand.toLowerCase().includes(filter.toLowerCase())
+			);
+		});
+		setFilteredProducts(result);
+	}
 
 	const addToCart = product => {
 		const newCart = [...cart];
@@ -59,11 +87,16 @@ function App() {
 					</a>
 
 					{/*search field */}
-					<div className="search-container">
-						<form action="/action_page.php">
-							<input type="text" placeholder="Search.." name="search" />
-							<button type="submit"><i className="fa fa-search"></i></button>
-						</form>
+					<div className='search-container'>
+						<input
+							type='text'
+							onChange={e => setFilter(e.target.value)}
+							placeholder='Search..'
+							name='search'
+						/>
+						<button type='submit' onClick={() => applyFilter(products)}>
+							search
+						</button>
 					</div>
 				</div>
 			)}
@@ -75,8 +108,12 @@ function App() {
 				exact
 				render={() => <Cart cart={cart} addItem={addItem} amount={amount} />}
 			/>
-			<Route path='/' exact render={() => <Home addToCart={addToCart} />} />
-			</div>
+			<Route
+				path='/'
+				exact
+				render={() => <Home addToCart={addToCart} products={filteredProducts} />}
+			/>
+		</div>
 	);
 }
 
