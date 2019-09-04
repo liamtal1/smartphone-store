@@ -32,6 +32,10 @@ function Register(props) {
 	}
 	return (
 		<div>
+			<center><img src='https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-round-1/254000/09-512.png'
+				 width={600}
+				 height={600}
+				 /></center>
 			email: <input type='text' name='email' onChange={handleChange} />
 			{err && <div style={{color: 'red', fontSize: '0.8em'}}>{err}</div>}
 			password: <input type='text' name='password' onChange={handleChange} />

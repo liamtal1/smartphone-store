@@ -32,9 +32,11 @@ function Login(props) {
 		<div id='id01' className=''>
 			<div className='modal-content animate' action='/action_page.php'>
 				<div className='imgcontainer'>
-					<img src='https://media.wired.com/photos/5b22c5c4b878a15e9ce80d92/master/pass/iphonex-TA.jpg'
+					<img src='https://cdn1.iconfinder.com/data/icons/social-messaging-ui-color-round-1/254000/09-512.png'
+						 width={600}
+						 height={600}
 					alt='Avatar'
-					className='avatar' height={250} />
+					className='avatar' />
 				</div>
 
 				<div className='container'>

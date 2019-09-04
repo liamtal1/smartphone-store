@@ -8,6 +8,7 @@ import './stylesheets/products.css';
 import './stylesheets/cart.css';
 import './stylesheets/about us.css';
 import './stylesheets/Product_of_the_week.css';
+import  './stylesheets/track.css';
 
 import axios from 'axios';
 
@@ -21,6 +22,7 @@ import Register from './pages/Register';
 import Cart from './pages/Cart';
 import About_us from './pages/About_us';
 import Product_of_the_week from './pages/Product_of_the_week';
+import Track from './pages/Track';
 
 function App() {
 	const user = Cookie.get('user');
@@ -88,6 +90,7 @@ function App() {
 					<NavLink to='/cart'>Cart</NavLink>
 					<NavLink to='/About_us'> About us </NavLink>
 					<NavLink to='/Product_of_the_week'> Product of the week</NavLink>
+					<NavLink to='/Track'> Track</NavLink>
 					<a href='#' className='href' onClick={logOut}>
 						log out
 					</a>
@@ -105,7 +108,9 @@ function App() {
 						</button>
 					</div>
 				</div>
-			)}
+			)
+			}
+
 
 			<Route path='/login' exact component={Login} />
 			<Route path='/register' exact component={Register} />
@@ -129,6 +134,11 @@ function App() {
 				path='/Product_of_the_week'
 				exact
 				render={() => <Product_of_the_week exact component = {Product_of_the_week} />}
+			/>
+			<Route
+				path='/Track'
+				exact
+				render={() => <Track exact component = {Track} />}
 			/>
 		</div>
 	);
