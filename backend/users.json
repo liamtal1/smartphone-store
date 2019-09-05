@@ -3,7 +3,7 @@
 	{"email": "phil@gmail.com", "password": "12345"},
 	{"email": "phil3@gmail.com", "password": "12345"},
 	{"email": "bla", "password": "bla"},
-	{"email": "admin", "password": "admin"},
+	{"email": "admin", "password": "admin", "isAdmin": true},
 	{"email": "a", "password": "a"},
 	{"email": "liam@gmail.com", "password": "liam"}
 ]
