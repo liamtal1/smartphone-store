@@ -3,7 +3,7 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 var Ddos = require('ddos');
-var ddos = new Ddos({burst: 10, limit: 15});
+var ddos = new Ddos({burst: 10, limit: 500});
 const cors = require('cors');
 const app = express();
 const port = 3001;
@@ -12,6 +12,22 @@ app.use(ddos.express);
 app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json());
+
+// save log
+// get products
+app.post('/log', (req, res) => {
+	try {
+		console.log('/log', req.body);
+		let file = fs.readFileSync('logs.json', 'utf8');
+		file = file || '[]';
+		const logs = JSON.parse(file);
+		logs.push(req.body);
+		fs.writeFileSync('logs.json', JSON.stringify(logs));
+		res.json();
+	} catch (err) {
+		console.log('/products err', err.message);
+	}
+});
 
 // refresh cookie
 app.use((req, res, next) => {

@@ -8,9 +8,10 @@ import './stylesheets/products.css';
 import './stylesheets/cart.css';
 import './stylesheets/about us.css';
 import './stylesheets/Product_of_the_week.css';
-import  './stylesheets/track.css';
+import './stylesheets/track.css';
 
 import axios from 'axios';
+import saveLog from './saveLog';
 
 import {Route, NavLink, withRouter} from 'react-router-dom';
 
@@ -73,6 +74,8 @@ function App() {
 			addItem(product, 1);
 			setCart(newCart);
 		}
+
+		saveLog(product);
 	};
 
 	const logOut = event => {
@@ -108,9 +111,7 @@ function App() {
 						</button>
 					</div>
 				</div>
-			)
-			}
-
+			)}
 
 			<Route path='/login' exact component={Login} />
 			<Route path='/register' exact component={Register} />
@@ -125,21 +126,13 @@ function App() {
 				exact
 				render={() => <Home addToCart={addToCart} products={filteredProducts} />}
 			/>
-			<Route
-				path='/About_us'
-				exact
-				render={() => <About_us exact component = {About_us} />}
-			/>
+			<Route path='/About_us' exact render={() => <About_us exact component={About_us} />} />
 			<Route
 				path='/Product_of_the_week'
 				exact
-				render={() => <Product_of_the_week exact component = {Product_of_the_week} />}
+				render={() => <Product_of_the_week exact component={Product_of_the_week} />}
 			/>
-			<Route
-				path='/Track'
-				exact
-				render={() => <Track exact component = {Track} />}
-			/>
+			<Route path='/Track' exact render={() => <Track exact component={Track} />} />
 		</div>
 	);
 }
