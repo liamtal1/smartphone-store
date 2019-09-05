@@ -65,7 +65,7 @@ function Login(props) {
 						required
 					/>
 
-					<button type='submit' onClick={props.close} > Buy </button>
+					<button type='submit' onClick={props.onBuy} > Buy </button>
 					<button type='submit' onClick={props.close}> Cancel </button>
 				</div>
 			</div>
