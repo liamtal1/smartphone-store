@@ -1,6 +1,7 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
+const {readFile, writeFile, log} = require('./functions');
 const fs = require('fs');
 var Ddos = require('ddos');
 var ddos = new Ddos({burst: 10, limit: 500});
@@ -12,6 +13,39 @@ app.use(ddos.express);
 app.use(cors());
 app.use(cookieParser());
 app.use(bodyParser.json());
+
+// on user buy
+// get products
+app.post('/buy', (req, res) => {
+	try {
+		const user = JSON.parse(req.cookies.user);
+		const cart = req.body.cart || [];
+		const amount = req.body.amount || {};
+		const products = readFile('products');
+		for (const cartProduct of cart) {
+			const product = products.find(p => p.id === cartProduct.id);
+			const totalAmount = amount[cartProduct.Model];
+			cartProduct.amount = totalAmount;
+			// validate quantity
+			if (totalAmount > product.quantity) {
+				throw new Error('sorry buy we dont have this amount yet');
+			}
+			// update products
+         product.quantity -= totalAmount;
+         product.totalOrder += totalAmount;
+		}
+		writeFile('products', products);
+		log({user: user.email, products: cart});
+
+		// update user
+		res.json();
+	} catch (err) {
+		console.log('/buy err', err.message);
+		res.status(500).json({
+			err: err.message,
+		});
+	}
+});
 
 // save log
 // get products
@@ -26,6 +60,16 @@ app.post('/log', (req, res) => {
 		res.json();
 	} catch (err) {
 		console.log('/products err', err.message);
+	}
+});
+
+app.get('/getLogs', (req, res) => {
+	try {
+		console.log('/getLogs', req.body);
+		let logs = readFile('logs');
+		res.json(logs);
+	} catch (err) {
+		console.log('/getLogs err', err.message);
 	}
 });
 

@@ -1,8 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import '../stylesheets/track.css';
 import axios from 'axios';
+import Cookies from 'js-cookie';
+import {Redirect} from 'react-router-dom';
+
 
 function ProductOfTheWeek() {
+	const user = Cookies.get('user');
+
 	let [products, setProducts] = useState([]);
 
 	useEffect(() => {
@@ -26,6 +31,9 @@ function ProductOfTheWeek() {
 			product = p;
 		}
 	});
+	if (!user) {
+		return <Redirect to='/login' />;
+	}
 
 	return <div className='main'>{product.Model}</div>;
 }

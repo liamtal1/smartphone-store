@@ -31,7 +31,7 @@ function Login(props) {
 				</div>
 
 				<div className='container'>
-					<label for='uname'>
+					<label htmlFor='uname'>
 						<b>Card Number</b>
 					</label>
 					<input
@@ -42,7 +42,7 @@ function Login(props) {
 						required
 					/>
 
-					<label for='psw'>
+					<label htmlFor='psw'>
 						<b>Date</b>
 					</label>
 					<input
@@ -54,7 +54,7 @@ function Login(props) {
 						required
 					/>
 
-					<label for='psw'>
+					<label htmlFor='psw'>
 						<b>CVV</b>
 					</label>
 					<input

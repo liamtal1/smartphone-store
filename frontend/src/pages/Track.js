@@ -29,9 +29,10 @@ function Track() {
 
 	const viewLogs = filteredItems.map(({user, products = []}, i) => {
 		return (
-			<div key={i}>
-				{user} buy ${products.length} items
-			</div>
+			<tr key={i}>
+				<td>{user}</td>
+				<td> buy ${products.length} items</td>
+			</tr>
 		);
 	});
 
@@ -40,9 +41,16 @@ function Track() {
 			<div className='header'>
 				<input type='text' onChange={handleChange} />
 			</div>
-			<div className='data'>
-				<div>{viewLogs}</div>
-			</div>
+			<table>
+				<thead>
+					<tr>
+						<th>user</th>
+						<th>order</th>
+					</tr>
+				</thead>
+				<tbody>{viewLogs}</tbody>
+			</table>
+			
 		</div>
 	);
 }
