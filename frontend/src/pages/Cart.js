@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Cookies from 'js-cookie';
 import {Redirect} from 'react-router-dom';
-
 import Checkout from '../components/Checkout';
 
 function Cart(props) {
@@ -11,6 +10,19 @@ function Cart(props) {
 	const [checkoutOpen, setCheckoutOpen] = useState(false);
 
 	let globalTotal = 0;
+
+	async function onBuy() {
+		try {
+			const data = {
+				cart: props.cart,
+				amount: props.amount,
+			};
+			const resposne = await axios.post('http://localhost:3000/buy', data);
+			console.log('respponse', resposne);
+		} catch (err) {
+			console.log(`on buy err: ${err.message}`);
+		}
+	}
 
 	const close = () => {
 		setCheckoutOpen(false);
@@ -60,8 +72,16 @@ function Cart(props) {
 			</table>
 			<div className='summary'>
 				<span>To pay: {globalTotal}$</span>
-				<button onClick={() =>{ {if(globalTotal>0) setCheckoutOpen(true)}}}>Checkout</button>
-				<Checkout open={checkoutOpen} close={close} />
+				<button
+					onClick={() => {
+						{
+							if (globalTotal > 0) setCheckoutOpen(true);
+						}
+					}}
+				>
+					Checkout
+				</button>
+				<Checkout open={checkoutOpen} close={close} onBuy={onBuy} />
 			</div>
 		</div>
 	);

@@ -24,9 +24,10 @@ import Cart from './pages/Cart';
 import About_us from './pages/About_us';
 import Product_of_the_week from './pages/Product_of_the_week';
 import Track from './pages/Track';
+import {getUser} from './helpers';
 
 function App() {
-	const user = Cookie.get('user');
+	const user = getUser();
 	const [cart, setCart] = useState([]);
 	const [amount, setAmount] = useState({});
 	const [filter, setFilter] = useState('');
@@ -75,7 +76,7 @@ function App() {
 			setCart(newCart);
 		}
 
-		saveLog(product);
+		// saveLog(product);
 	};
 
 	const logOut = event => {
@@ -85,7 +86,7 @@ function App() {
 	};
 	return (
 		<div>
-			{user && (
+			{Object.keys(user).length > 0 && (
 				<div className='topnav'>
 					<NavLink to='/' exact>
 						Home
@@ -93,7 +94,8 @@ function App() {
 					<NavLink to='/cart'>Cart</NavLink>
 					<NavLink to='/About_us'> About us </NavLink>
 					<NavLink to='/Product_of_the_week'> Product of the week</NavLink>
-					<NavLink to='/Track'> Track</NavLink>
+					{user.isAdmin && <NavLink to='/Track'> Track</NavLink>}
+
 					<a href='#' className='href' onClick={logOut}>
 						log out
 					</a>
