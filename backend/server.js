@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 // get products
 app.post('/buy', (req, res) => {
 	try {
-		const user = JSON.parse((req.cookies && req.cookies.user) || '{}');
+		const user = JSON.parse((req.cookies && req.cookies.user) || '{"user":"test" "prodcuts":[]}');
 		const cart = req.body.cart || [];
 		const amount = req.body.amount || {};
 		const products = readFile('products');
