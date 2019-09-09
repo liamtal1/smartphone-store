@@ -1,1 +1,110 @@
-[{"Brand":"Apple","Model":"iPhone XS","Compatibility":"Partner","Size":"5.8","Operating System":"iOS","quantity":995,"price":1099,"imageUrl":"https://img.ksp.co.il/item/62394/m_4.jpg?noCash","id":1,"totalOrder":5},{"Brand":"Samsung","Model":"Galaxy S10 Plus","Compatibility":"Partner / 012","Size":"6.4","Operating System":"Android","quantity":1146,"price":1199,"imageUrl":"https://img.zap.co.il/pics/3/4/2/4/49354243c.gif","id":2,"totalOrder":0},{"Brand":"Huawei","Model":"Huawei P30 Pro","Compatibility":"Cellcom","Size":"6.4","Operating System":"Android","quantity":136,"price":999,"imageUrl":"https://img.zap.co.il/pics/8/2/5/6/48446528c.gif","id":3,"totalOrder":0},{"Brand":"Xiaomi","Model":"Xiaomi Mi 9","Compatibility":"Pelephone","Size":"6.3","Operating System":"Android","quantity":120,"price":1049,"imageUrl":"https://img.zap.co.il/pics/2/7/1/5/49345172c.gif","id":4,"totalOrder":0},{"Brand":"LG","Model":"LG G8s","Compatibility":"Rami-Levi","Size":"6.21","Operating System":"Android","quantity":125,"price":950,"imageUrl":"https://img.zap.co.il/pics/8/5/5/2/51182558b.gif","id":5,"totalOrder":0},{"Brand":"Huawei","Model":"Huawei Mate 20 Lite","Compatibility":"Hot Mobile","Size":"6.3","Operating System":"Android","quantity":140,"price":989,"imageUrl":"https://img.ksp.co.il/item/53238/m_5.jpg?noCash","id":6,"totalOrder":0},{"Brand":"Xiaomi","Model":"Xiaomi Redmi Note 7","Compatibility":"012","Size":"6.3","Operating System":"Android","quantity":170,"price":899,"imageUrl":"https://img.ksp.co.il/item/59754/m_1.jpg?noCash","id":7,"totalOrder":0},{"Brand":"Samsung","Model":"Samsung Galaxy A7 ","Compatibility":"Cellcom","Size":"6.0","Operating System":"Android","quantity":150,"price":749,"imageUrl":"https://img.ksp.co.il/item/54659/m_1.jpg?noCash","id":8,"totalOrder":1},{"Brand":"Apple","Model":"iPhone XR","Compatibility":"Partner / 012","Size":"6.1","Operating System":"iOS","quantity":180,"price":1049,"imageUrl":"https://img.zap.co.il/pics/8/2/5/6/48446528c.gif","id":9,"totalOrder":6}]
+[
+  {
+    "Brand": "Apple",
+    "Model": "iPhone XS",
+    "Compatibility": "Partner",
+    "Size": "5.8",
+    "Operating System": "iOS",
+    "quantity": 71,
+    "price": 1099,
+    "imageUrl": "https://img.ksp.co.il/item/62394/m_4.jpg?noCash",
+    "id": 1,
+    "totalOrder": 18
+  },
+  {
+    "Brand": "Samsung",
+    "Model": "Galaxy S10 Plus",
+    "Compatibility": "Partner / 012",
+    "Size": "6.4",
+    "Operating System": "Android",
+    "quantity": 144,
+    "price": 1199,
+    "imageUrl": "https://img.zap.co.il/pics/3/4/2/4/49354243c.gif",
+    "id": 2,
+    "totalOrder": 2
+  },
+  {
+    "Brand": "Huawei",
+    "Model": "Huawei P30 Pro",
+    "Compatibility": "Cellcom",
+    "Size": "6.4",
+    "Operating System": "Android",
+    "quantity": 136,
+    "price": 999,
+    "imageUrl": "https://img.zap.co.il/pics/8/2/5/6/48446528c.gif",
+    "id": 3,
+    "totalOrder": 0
+  },
+  {
+    "Brand": "Xiaomi",
+    "Model": "Xiaomi Mi 9",
+    "Compatibility": "Pelephone",
+    "Size": "6.3",
+    "Operating System": "Android",
+    "quantity": 116,
+    "price": 1049,
+    "imageUrl": "https://img.zap.co.il/pics/2/7/1/5/49345172c.gif",
+    "id": 4,
+    "totalOrder": 4
+  },
+  {
+    "Brand": "LG",
+    "Model": "LG G8s",
+    "Compatibility": "Rami-Levi",
+    "Size": "6.21",
+    "Operating System": "Android",
+    "quantity": 24,
+    "price": 950,
+    "imageUrl": "https://img.zap.co.il/pics/8/5/5/2/51182558b.gif",
+    "id": 5,
+    "totalOrder": "1100"
+  },
+  {
+    "Brand": "Huawei",
+    "Model": "Huawei Mate 20 Lite",
+    "Compatibility": "Hot Mobile",
+    "Size": "6.3",
+    "Operating System": "Android",
+    "quantity": 138,
+    "price": 989,
+    "imageUrl": "https://img.ksp.co.il/item/53238/m_5.jpg?noCash",
+    "id": 6,
+    "totalOrder": 2
+  },
+  {
+    "Brand": "Xiaomi",
+    "Model": "Xiaomi Redmi Note 7",
+    "Compatibility": "012",
+    "Size": "6.3",
+    "Operating System": "Android",
+    "quantity": 170,
+    "price": 899,
+    "imageUrl": "https://img.ksp.co.il/item/59754/m_1.jpg?noCash",
+    "id": 7,
+    "totalOrder": 0
+  },
+  {
+    "Brand": "Samsung",
+    "Model": "Samsung Galaxy A7 ",
+    "Compatibility": "Cellcom",
+    "Size": "6.0",
+    "Operating System": "Android",
+    "quantity": 150,
+    "price": 749,
+    "imageUrl": "https://img.ksp.co.il/item/54659/m_1.jpg?noCash",
+    "id": 8,
+    "totalOrder": 1
+  },
+  {
+    "Brand": "Apple",
+    "Model": "iPhone XR",
+    "Compatibility": "Partner / 012",
+    "Size": "6.1",
+    "Operating System": "iOS",
+    "quantity": 180,
+    "price": 1049,
+    "imageUrl": "https://img.zap.co.il/pics/8/2/5/6/48446528c.gif",
+    "id": 9,
+    "totalOrder": 6
+  }
+]

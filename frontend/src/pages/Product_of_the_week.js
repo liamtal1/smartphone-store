@@ -5,7 +5,7 @@ import Cookies from 'js-cookie';
 import {Redirect} from 'react-router-dom';
 
 
-function ProductOfTheWeek() {
+function ProductOfTheWeek(props) {
 	const user = Cookies.get('user');
 
 	let [products, setProducts] = useState([]);
@@ -35,6 +35,14 @@ function ProductOfTheWeek() {
 		return <Redirect to='/login' />;
 	}
 
-	return <div className='main'>{product.Model}</div>;
+	return (<div className='content'>
+			<img src={product.imageUrl} alt='Mountains' />
+			<h3>
+				{product.Model} {product.price}$
+			</h3>
+			<div>
+				<button onClick={() => props.addToCart(product)}>Add to cart</button>
+			</div>
+		</div>);
 }
 export default ProductOfTheWeek;
