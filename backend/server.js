@@ -18,7 +18,7 @@ app.use(bodyParser.json());
 // get products
 app.post('/buy', (req, res) => {
 	try {
-		const user = JSON.parse(req.cookies.user);
+		const user = JSON.parse((req.cookies && req.cookies.user) || '{}');
 		const cart = req.body.cart || [];
 		const amount = req.body.amount || {};
 		const products = readFile('products');
@@ -31,8 +31,8 @@ app.post('/buy', (req, res) => {
 				throw new Error('sorry buy we dont have this amount yet');
 			}
 			// update products
-         product.quantity -= totalAmount;
-         product.totalOrder += totalAmount;
+			product.quantity -= totalAmount;
+			product.totalOrder += totalAmount;
 		}
 		writeFile('products', products);
 		log({user: user.email, products: cart});
@@ -160,7 +160,7 @@ app.post('/login', (req, res) => {
 
 		console.log('existsUser', existsUser);
 		res.json({
-			data: users,
+			data: 'ok',
 		});
 	} catch (err) {
 		console.log('/login err', err.message);
@@ -171,3 +171,8 @@ app.post('/login', (req, res) => {
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+// for testings
+module.exports = {
+	app,
+};

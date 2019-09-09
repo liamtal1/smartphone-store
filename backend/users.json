@@ -5,5 +5,6 @@
 	{"email": "bla", "password": "bla"},
 	{"email": "admin", "password": "admin", "isAdmin": true},
 	{"email": "a", "password": "a"},
-	{"email": "liam@gmail.com", "password": "liam"}
+	{"email": "liam@gmail.com", "password": "liam"},
+	{"email": "test user 1568049139401", "password": "test"}
 ]
